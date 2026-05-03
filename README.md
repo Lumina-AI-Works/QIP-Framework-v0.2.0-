@@ -9,42 +9,30 @@
 
 ## 🔬 Research Context
 ### The Problem
-Quantum Image Processing (QIP) promises exponential advantages in computational complexity and storage. However, two major hurdles remain:
-1. **The State Preparation Bottleneck**: Encoding classical data into quantum states (FRQI, NEQR) is often as expensive as the processing itself.
-2. **NISQ Constraints**: Near-term quantum devices are noisy. Understanding how **T1/T2 relaxation** and **gate errors** impact image structural fidelity (SSIM) is critical for moving QIP from theory to practice.
+Quantum Image Processing (QIP) promises exponential advantages in computational complexity and storage. However, current hardware noise (decoherence, gate errors) poses a significant bottleneck. This framework provides the tools to analyze these trade-offs through hardware-aware simulation and rigorous benchmarking.
 
 ### Our Solution
-We present a modular framework designed to analyze these trade-offs. By implementing optimized encoding (Gray Code) and realistic hardware-aware noise models, this framework allows researchers to benchmark quantum algorithms (QHED, Blur, Dilation) against classical baselines under realistic constraints.
+We present a modular framework designed to analyze these trade-offs. By implementing optimized encoding (Gray Code) and realistic hardware-aware noise models, this framework allows researchers to benchmark quantum algorithms against classical baselines under realistic constraints.
 
 ## 👥 Authors
 - **[M. Sowmya Priya](https://github.com/Sowmyapriya-Mahamkali)**
 - **[K. Lalitha](https://github.com/Lalitha-Koruprolu)**
 
-*Equal contribution across mathematical modeling, circuit optimization, and benchmarking.*
-
 ---
 
 ## 🛠️ Framework Architecture
-The project is structured into functional subpackages to reflect a professional scientific identity:
+The project follows a "System" design pattern similar to professional research repos:
 
 ```text
 qip_project/
-├── qip_framework/
-│   ├── core/           # Pipeline orchestration & Noise modeling
-│   ├── encoding/       # State preparation (Gray-Code FRQI, QPIE)
-│   ├── processing/     # Quantum circuits (QHED, Blur, Dilation)
-│   ├── benchmarking/   # Scientific metrics (SSIM, Cosine Similarity)
-│   └── utils.py        # I/O & Padding
-├── demo.py             # One-click execution script
-├── results/            # Proof-of-results (Visualizations & Data)
+├── qip_framework/      # Core Library Logic
+├── main.py             # System entry point (CLI)
+├── inference.py        # Single-image processing script
+├── scripts/            # Benchmarking & Data generation tools
+├── data/               # Sample research datasets
+├── results/            # Proof-of-results & Data CSVs
 └── docs/               # Technical theory guides
 ```
-
-## 📊 Scientific Weight & Evaluation
-This framework doesn't just "process images"—it evaluates performance.
-- **Structural Similarity Index (SSIM)**: Used instead of simple MSE to measure perceptual quality.
-- **Ablation Studies**: Built-in support to isolate noise effects vs. algorithmic performance.
-- **Hardware Metrics**: Automated reporting of CNOT counts and transpiled circuit depth.
 
 ## ▶️ Usage Clarity
 
@@ -53,24 +41,22 @@ This framework doesn't just "process images"—it evaluates performance.
 pip install qip-framework
 ```
 
-### Run the Demo
-The simplest way to see the framework in action is:
+### 1. Main Entry Point (CLI)
+Run a full experiment using the command-line interface:
 ```bash
-python demo.py
+python main.py --algo qhed --encoding qpie --image data/sample.png
 ```
 
-### High-Level API
-```python
-from qip_framework import QIPPipeline
+### 2. Single-Image Inference
+Process any image quickly:
+```bash
+python inference.py path/to/image.png
+```
 
-# 1. Initialize with hardware-aware noise
-pipeline = QIPPipeline(encoding="qpie", algorithm="qhed")
-
-# 2. Execute research pipeline
-results = pipeline.run("path/to/image.png")
-
-# 3. Access scientific data
-print(f"SSIM Score: {results['ssim']:.4f}")
+### 3. Research Benchmarking
+Generate the scientific dataset used in our research:
+```bash
+python scripts/generate_research_data.py
 ```
 
 ---
