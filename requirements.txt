@@ -1,0 +1,9 @@
+qiskit
+qiskit-aer
+opencv-python
+matplotlib
+numpy
+pandas
+tabulate
+pytest
+scikit-image

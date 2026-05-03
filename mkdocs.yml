@@ -1,0 +1,48 @@
+site_name: QIP Framework Documentation
+site_description: Research-grade Quantum Image Processing Framework
+site_author: M. Sowmya Priya, K. Lalitha
+site_url: https://Lumina-AI-Works.github.io/qip-framework/
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+
+nav:
+  - Home: index.md
+  - Algorithms:
+      - Overview: algorithms.md
+      - Optimization (Gray Code): optimization.md
+  - Simulation:
+      - Noise Models: noise_models.md
+  - Research:
+      - Experiments: experiments.md
+  - API Reference: api.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
