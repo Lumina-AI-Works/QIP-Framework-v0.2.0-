@@ -38,16 +38,13 @@ def encode_frqi(pixel_vals):
                 qc.x(j)
         
         # 2b. Apply Rotation (Theta calculation)
-        # Using the pixel value at the index represented by gray_idx? 
-        # Actually, standard FRQI maps pixel i to state i. 
-        # If we visit in Gray Code order, we use pixel_vals[gray_idx].
         theta = pixel_vals[gray_idx] * (np.pi / 2)
         if theta != 0:
             qc.mcry(2 * theta, list(range(n)), n)
             
         current_state = gray_idx
         
-    # 3. Final cleanup (optional, but good for circuit reuse)
+    # 3. Final cleanup
     for j in range(n):
         if (current_state >> j) & 1:
             qc.x(j)

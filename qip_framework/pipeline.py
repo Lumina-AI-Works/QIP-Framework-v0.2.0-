@@ -3,9 +3,9 @@ from qiskit import transpile
 from qiskit_aer import AerSimulator
 
 from .encoding import encode_qpie, encode_frqi
-from .algorithms import create_qhed_circuit, create_inversion_circuit, create_brightness_circuit, create_blur_circuit, create_dilation_circuit
+from .processing import create_qhed_circuit, create_inversion_circuit, create_brightness_circuit, create_blur_circuit, create_dilation_circuit
 from .noise import create_advanced_noise_model
-from .analysis import calculate_cosine_similarity, calculate_ssim, reconstruct_from_counts, normalize_for_display
+from .benchmarking import calculate_cosine_similarity, calculate_ssim, reconstruct_from_counts, normalize_for_display
 from .utils import load_and_preprocess, classical_baseline_sobel, is_power_of_two
 
 class QIPPipeline:
