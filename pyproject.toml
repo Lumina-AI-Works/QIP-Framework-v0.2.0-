@@ -13,8 +13,8 @@ readme = "README.md"
 requires-python = ">=3.8"
 license = { text = "MIT" }
 authors = [
-    { name = "M. Sowmya Priya", email = "sowmya.priya@example.com" },
-    { name = "K. Lalitha", email = "lalitha.k@example.com" }
+    { name = "M. Sowmya Priya", email = "sowmyapriya7325@gmail.com" },
+    { name = "K. Lalitha", email = "lalitha.koruprolu29@gmail.com" }
 ]
 keywords = ["quantum", "qiskit", "image-processing", "nisq", "qhed", "frqi", "qpie"]
 classifiers = [
