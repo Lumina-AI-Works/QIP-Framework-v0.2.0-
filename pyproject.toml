@@ -6,8 +6,8 @@ build-backend = "setuptools.build_meta"
 packages = ["qip_framework"]
 
 [project]
-name = "qip-framework"
-version = "0.2.0"
+name = "qip-lumina"
+version = "0.2.1"
 description = "A research-grade Hybrid Quantum-Classical Image Processing Framework with NISQ noise simulation."
 readme = "README.md"
 requires-python = ">=3.8"
@@ -16,7 +16,16 @@ authors = [
     { name = "M. Sowmya Priya", email = "sowmyapriya7325@gmail.com" },
     { name = "K. Lalitha", email = "lalitha.koruprolu29@gmail.com" }
 ]
-keywords = ["quantum", "qiskit", "image-processing", "nisq", "qhed", "frqi", "qpie"]
+keywords = [
+    "quantum",
+    "qiskit",
+    "image-processing",
+    "nisq",
+    "qhed",
+    "frqi",
+    "qpie"
+]
+
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Science/Research",
@@ -26,8 +35,9 @@ classifiers = [
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.11"
 ]
+
 dependencies = [
     "qiskit>=0.45.0",
     "qiskit-aer>=0.13.0",
@@ -40,7 +50,7 @@ dependencies = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/Lumina-AI-Works/qip-framework"
-"Documentation" = "https://Lumina-AI-Works.github.io/qip-framework/"
-"Bug Tracker" = "https://github.com/Lumina-AI-Works/qip-framework/issues"
-"Source Code" = "https://github.com/Lumina-AI-Works/qip-framework"
+Homepage = "https://github.com/Lumina-AI-Works/QIP-Framework-v0.2.0-"
+Documentation = "https://github.com/Lumina-AI-Works/QIP-Framework-v0.2.0-"
+"Bug Tracker" = "https://github.com/Lumina-AI-Works/QIP-Framework-v0.2.0-/issues"
+"Source Code" = "https://github.com/Lumina-AI-Works/QIP-Framework-v0.2.0-"
